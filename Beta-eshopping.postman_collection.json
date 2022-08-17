@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "c8e7641e-06d0-4213-a405-7839cfa6ea3e",
+		"name": "Beta-eshopping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3112962"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ugokingsley",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "grace_123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Store",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-length": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"store_name\": \"easypaywebLIVE\",\r\n    \"address\" : \"1AC4BB48-7436-4526-BC18-A2C127191704\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/shop/stores/new/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"stores",
+						"new",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Stores",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/shop/stores",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Store",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/shop/store/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"store",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Orders For A Store",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/shop/store/1/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"store",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get An Order",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/shop/orders/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/shop/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order Items",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eb56da760411e946faf64d54033d702a3dd8ad72",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 1,\r\n            \"product\": 1\r\n        }\r\n    ],\r\n    \"order_state\": \"opened\",\r\n    \"store\": {\r\n        \"id\": 1,\r\n        \"store_name\": \"Victory\",\r\n        \"address\": \"ROAD B29, VALLEY VIEW ESTATE\",\r\n        \"createdAt\": \"2022-08-16T08:28:02.551108Z\",\r\n        \"store_admin\": 1\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/shop/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shop",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
